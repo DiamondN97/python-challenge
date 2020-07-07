@@ -55,18 +55,24 @@ print(f'Average Change: ${average_change}')
 
 
 #find greatest increase in profits
-for i in range(0, len(profit_change)):
-    if profit_change > 
-    profit_max = max(profit_change)
-#print(profit_max)
-print(f'Greatest Increase in Profits: : (${profit_max})')
+# for i in range(0, len(profit_change))
+profit_max = max(profit_change)
+maxIndex = (profit_change.index(profit_max)+1)
+
+
+maxMonth = month_count[maxIndex]
+
+print(f'Greatest Increase in Profits: : {maxMonth} (${profit_max})')
 
 
 #find greatest decrease in profits
-for i in range(0, len(profit_change)):
-    profit_min = min(profit_change)
-print(f'Greatest Decrease in Profits: : (${profit_min})')
-    
+profit_min = min(profit_change)
+minIndex = (profit_change.index(profit_min)+1)
+
+
+minMonth = month_count[minIndex]
+
+print(f'Greatest Increase in Profits: : {minMonth} (${profit_min})')
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
