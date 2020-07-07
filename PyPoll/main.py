@@ -18,7 +18,7 @@ candidate_name = str
 datacsv = os.path.join('Resources', 'election_data.csv')
 
 with open ('Bootcamp/GitLab/python-challenge/PyPoll/Resources/election_data.csv', 'r') as datacsv_file:
-#with open (datacsv, 'r') as datacsv_file:
+#with open (datacsv, 'r') as datacsv_file:  USE THIS IN GITBASH
     csvReader = csv.reader (datacsv_file, delimiter = ',')
     next (csvReader) 
     for row in csvReader:
@@ -79,3 +79,17 @@ print(f"O'Tooley: {tooley_votes_pct}% ({tooley_votes})")
 print("----------------------------")
 print (f"Winner: {PopularVote}")
 print("----------------------------")
+
+
+output = open('Bootcamp\GitLab\python-challenge\PyPoll\PyPollOutput.txt', 'w')
+print("Election Results", file=output)
+print("----------------------------")
+print(f'Total Votes: {VoteTotal}', file=output)
+print("----------------------------", file=output)
+print(f"Khan Votes: {khan_votes_pct}% ({khan_votes})", file=output)
+print(f"Correy: {correy_votes_pct}% ({correy_votes})", file=output)
+print(f"Li: {li_votes_pct}% ({li_votes})", file=output)
+print(f"O'Tooley: {tooley_votes_pct}% ({tooley_votes})", file=output)
+print("----------------------------", file=output)
+print (f"Winner: {PopularVote}", file=output)
+print("----------------------------", file=output)
