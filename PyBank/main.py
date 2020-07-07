@@ -80,11 +80,18 @@ print(f'Average Change: ${average_change}')
 print(f'Greatest Increase in Profits: : {maxMonth} (${profit_max})')
 print(f'Greatest Increase in Profits: : {minMonth} (${profit_min})')
 
-
+output = open('Bootcamp\GitLab\python-challenge\PyBank\PyBankOutput.txt', 'w')
+print("Financial Analysis", file=output)
+print("----------------------------", file=output)
+print(f'Total Months: {TotalMonth}', file=output)
+print(f'Total Profit: ${profit_sum}', file=output)
+print(f'Average Change: ${average_change}', file=output)
+print(f'Greatest Increase in Profits: : {maxMonth} (${profit_max})', file=output)
+print(f'Greatest Increase in Profits: : {minMonth} (${profit_min})', file=output) 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# # output = r'C:\Users\diamo\Bootcamp\GitLab\python-challenge\PyBank\PyBankOutput.txt'
-# with open('Bootcamp\GitLab\python-challenge\PyBank', 'w') as output:
+# output = r'C:\Users\diamo\Bootcamp\GitLab\python-challenge\PyBank\PyBankOutput.txt'
+
 # #outputFile = output.txt
 
 #     output.write("Financial Analysis")
